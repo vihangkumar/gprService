@@ -1,0 +1,897 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.5-b03-. -->
+<wsdl:definitions xmlns="http://www.incomm.com/CHS" xmlns:chs="http://www.incomm.com/CHSTypes"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.incomm.com/CHS">
+
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://www.incomm.com/CHS">
+            <xsd:import namespace="http://www.incomm.com/CHSTypes" schemaLocation="http://10.4.133.32:8880/chs-ws/CHS?xsd=1" />
+        </xsd:schema>
+    </wsdl:types>
+
+    <!-- WSDL Messages  -->
+    <!-- Get rid of this. Validate and Authenticate Request  -->
+    <wsdl:message name="ValidateAndAuthenticateRequest">
+        <wsdl:part name="ValidateAndAuthenticateRequest" element="chs:ValidateAndAuthenticateRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="ValidateAndAuthenticateResponse">
+        <wsdl:part name="ValidateAndAuthenticateResponse" element="chs:ValidateAndAuthenticateResponse" />
+    </wsdl:message>
+
+    <!-- Validate and Authenticate Request  -->
+    <wsdl:message name="ValidateAndAuthenticateRevisedRequest">
+        <wsdl:part name="ValidateAndAuthenticateRevisedRequest" element="chs:ValidateAndAuthenticateRevisedRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="ValidateAndAuthenticateRevisedResponse">
+        <wsdl:part name="ValidateAndAuthenticateRevisedResponse" element="chs:ValidateAndAuthenticateRevisedResponse" />
+    </wsdl:message>
+
+    <!-- Validate and Authenticate Using Cardnumber and Pin Request  -->
+    <wsdl:message name="ValidateCardUsingCardPinAndCVVRequest">
+        <wsdl:part name="ValidateCardUsingCardPinAndCVVRequest" element="chs:ValidateCardUsingCardPinAndCVVRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="ValidateCardUsingCardPinAndCVVResponse">
+        <wsdl:part name="ValidateCardUsingCardPinAndCVVResponse" element="chs:ValidateCardUsingCardPinAndCVVResponse" />
+    </wsdl:message>
+
+    <!-- Current Month Transactions Request  -->
+    <wsdl:message name="GetCurrentMonthTransactionRequest">
+        <wsdl:part name="GetCurrentMonthTransactionRequest" element="chs:GetCurrentMonthTransactionRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="GetCurrentMonthTransactionResponse">
+        <wsdl:part name="GetCurrentMonthTransactionResponse" element="chs:GetCurrentMonthTransactionResponse" />
+    </wsdl:message>
+
+    <!-- Monthly Statement Transactions Request  -->
+    <wsdl:message name="GetMonthlyStatementRequest">
+        <wsdl:part name="GetMonthlyStatementRequest" element="chs:GetMonthlyStatementRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="GetMonthlyStatementResponse">
+        <wsdl:part name="GetMonthlyStatementResponse" element="chs:GetMonthlyStatementResponse" />
+    </wsdl:message>
+
+    <!-- Card Issuance Transactions Request  -->
+    <wsdl:message name="CardIssuanceRequest">
+        <wsdl:part name="CardIssuanceRequest" element="chs:CardIssuanceRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CardIssuanceResponse">
+        <wsdl:part name="CardIssuanceResponse" element="chs:CardIssuanceResponse" />
+    </wsdl:message>
+
+    <!-- Card Activation Transaction Request  -->
+    <wsdl:message name="CardActivationRequest">
+        <wsdl:part name="CardActivationRequest" element="chs:CardActivationRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CardActivationResponse">
+        <wsdl:part name="CardActivationResponse" element="chs:CardActivationResponse" />
+    </wsdl:message>
+
+    <!--  Update PIN Transaction Request  -->
+    <wsdl:message name="UpdatePinRequest">
+        <wsdl:part name="UpdatePinRequest" element="chs:UpdatePinRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="UpdatePinResponse">
+        <wsdl:part name="UpdatePinResponse" element="chs:UpdatePinResponse" />
+    </wsdl:message>
+
+    <!--  Direct Deposit From Transaction Request  -->
+    <wsdl:message name="DirectDepositFormRequest">
+        <wsdl:part name="DirectDepositFormRequest" element="chs:DirectDepositFormRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="DirectDepositFormResponse">
+        <wsdl:part name="DirectDepositFormResponse" element="chs:DirectDepositFormResponse" />
+    </wsdl:message>
+
+    <!--  Card Lost Transaction Request  -->
+    <wsdl:message name="CardLostRequest">
+        <wsdl:part name="CardLostRequest" element="chs:CardLostRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CardLostResponse">
+        <wsdl:part name="CardLostResponse" element="chs:CardLostResponse" />
+    </wsdl:message>
+
+    <!--  Card Found Transaction Request  -->
+    <wsdl:message name="CardFoundRequest">
+        <wsdl:part name="CardFoundRequest" element="chs:CardFoundRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CardFoundResponse">
+        <wsdl:part name="CardFoundResponse" element="chs:CardFoundResponse" />
+    </wsdl:message>
+
+    <!--  Personal Info Inquiry  Request  -->
+    <wsdl:message name="PersonalInfoInquiryRequest">
+        <wsdl:part name="PersonalInfoInquiryRequest" element="chs:PersonalInfoInquiryRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="PersonalInfoInquiryResponse">
+        <wsdl:part name="PersonalInfoInquiryResponse" element="chs:PersonalInfoInquiryResponse" />
+    </wsdl:message>
+
+    <!--  Update Personal Info Request  -->
+    <wsdl:message name="UpdatedPersonalInfoRequest">
+        <wsdl:part name="UpdatedPersonalInfoRequest" element="chs:UpdatedPersonalInfoRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="UpdatedPersonalInfoResponse">
+        <wsdl:part name="UpdatedPersonalInfoResponse" element="chs:UpdatedPersonalInfoResponse" />
+    </wsdl:message>
+
+    <!--  Retrieve Alerts Request  -->
+    <wsdl:message name="RetrieveAlertsRequest">
+        <wsdl:part name="RetrieveAlertsRequest" element="chs:RetrieveAlertsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="RetrieveAlertsResponse">
+        <wsdl:part name="RetrieveAlertsResponse" element="chs:RetrieveAlertsResponse" />
+    </wsdl:message>
+
+    <!--  Set Alerts Request  -->
+    <wsdl:message name="SetAlertsRequest">
+        <wsdl:part name="SetAlertsRequest" element="chs:SetAlertsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="SetAlertsResponse">
+        <wsdl:part name="SetAlertsResponse" element="chs:SetAlertsResponse" />
+    </wsdl:message>
+
+    <!--  Card To Card Transfer Request  -->
+    <wsdl:message name="CardToCardTransferRequest">
+        <wsdl:part name="CardToCardTransferRequest" element="chs:CardToCardTransferRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CardToCardTransferResponse">
+        <wsdl:part name="CardToCardTransferResponse" element="chs:CardToCardTransferResponse" />
+    </wsdl:message>
+
+    <!--  Card To Card Transfer Request  -->
+    <wsdl:message name="TransferLimitsRequest">
+        <wsdl:part name="TransferLimitsRequest" element="chs:TransferLimitsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="TransferLimitsResponse">
+        <wsdl:part name="TransferLimitsResponse" element="chs:TransferLimitsResponse" />
+    </wsdl:message>
+
+    <!-- Save User Credentials -->
+    <wsdl:message name="SaveUserCredentialsRequest">
+        <wsdl:part name="SaveUserCredentialsRequest" element="chs:SaveUserCredentialsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="SaveUserCredentialsResponse">
+        <wsdl:part name="SaveUserCredentialsResponse" element="chs:SaveUserCredentialsResponse" />
+    </wsdl:message>
+
+    <!--  Get Registration Status by CardNubmer and CVV -->
+    <wsdl:message name="GetRegistartionStatusRequest">
+        <wsdl:part name="GetRegistartionStatusRequest" element="chs:GetRegistartionStatusRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="GetRegistartionStatusResponse">
+        <wsdl:part name="GetRegistartionStatusResponse" element="chs:GetRegistartionStatusResponse" />
+    </wsdl:message>
+
+    <!--  Recover Password Security Questions -->
+    <wsdl:message name="RecoverPasswordSecurityQuestionsRequest">
+        <wsdl:part name="RecoverPasswordSecurityQuestionsRequest" element="chs:RecoverPasswordSecurityQuestionsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="RecoverPasswordSecurityQuestionsResponse">
+        <wsdl:part name="RecoverPasswordSecurityQuestionsResponse" element="chs:RecoverPasswordSecurityQuestionsResponse" />
+    </wsdl:message>
+
+    <!--  Recover Password Validate Security Questions -->
+    <wsdl:message name="RecoverPasswordValidateSecurityQuestionsRequest">
+        <wsdl:part name="RecoverPasswordValidateSecurityQuestionsRequest" element="chs:RecoverPasswordValidateSecurityQuestionsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="RecoverPasswordValidateSecurityQuestionsResponse">
+        <wsdl:part name="RecoverPasswordValidateSecurityQuestionsResponse" element="chs:RecoverPasswordValidateSecurityQuestionsResponse" />
+    </wsdl:message>
+
+    <!--  Set New Password -->
+    <wsdl:message name="SetNewPasswordRequest">
+        <wsdl:part name="SetNewPasswordRequest" element="chs:SetNewPasswordRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="SetNewPasswordResponse">
+        <wsdl:part name="SetNewPasswordResponse" element="chs:SetNewPasswordResponse" />
+    </wsdl:message>
+
+    <!-- Update Password  -->
+    <wsdl:message name="UpdatePasswordRequest">
+        <wsdl:part name="UpdatePasswordRequest" element="chs:UpdatePasswordRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="UpdatePasswordResponse">
+        <wsdl:part name="UpdatePasswordResponse" element="chs:UpdatePasswordResponse" />
+    </wsdl:message>
+
+    <!-- Create Savings Account -->
+    <wsdl:message name="CreateSavingsAccountRequest">
+        <wsdl:part name="CreateSavingsAccountRequest" element="chs:CreateSavingsAccountRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CreateSavingsAccountResponse">
+        <wsdl:part name="CreateSavingsAccountResponse" element="chs:CreateSavingsAccountResponse" />
+    </wsdl:message>
+
+    <!-- Close Savings Account -->
+    <wsdl:message name="CloseSavingsAccountRequest">
+        <wsdl:part name="CloseSavingsAccountRequest" element="chs:CloseSavingsAccountRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CloseSavingsAccountResponse">
+        <wsdl:part name="CloseSavingsAccountResponse" element="chs:CloseSavingsAccountResponse" />
+    </wsdl:message>
+
+    <!-- Close Savings Account with Balance Transfer -->
+    <wsdl:message name="CloseSavingsAccountWithBalanceTransferRequest">
+        <wsdl:part name="CloseSavingsAccountWithBalanceTransferRequest" element="chs:CloseSavingsAccountWithBalanceTransferRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CloseSavingsAccountWithBalanceTransferResponse">
+        <wsdl:part name="CloseSavingsAccountWithBalanceTransferResponse" element="chs:CloseSavingsAccountWithBalanceTransferResponse" />
+    </wsdl:message>
+
+    <!-- Re-Open Savings Account -->
+    <wsdl:message name="ReOpenSavingsAccountRequest">
+        <wsdl:part name="ReOpenSavingsAccountRequest" element="chs:ReOpenSavingsAccountRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="ReOpenSavingsAccountResponse">
+        <wsdl:part name="ReOpenSavingsAccountResponse" element="chs:ReOpenSavingsAccountResponse" />
+    </wsdl:message>
+
+    <!-- Savings Account Transfer History -->
+    <wsdl:message name="SavingsAccountActivityRequest">
+        <wsdl:part name="SavingsAccountActivityRequest" element="chs:SavingsAccountActivityRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="SavingsAccountActivityResponse">
+        <wsdl:part name="SavingsAccountActivityResponse" element="chs:SavingsAccountActivityResponse" />
+    </wsdl:message>
+
+    <!-- Edit Auto Transfer Settings -->
+    <wsdl:message name="EditAutoTransferSettingsRequest">
+        <wsdl:part name="EditAutoTransferSettingsRequest" element="chs:EditAutoTransferSettingsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="EditAutoTransferSettingsResponse">
+        <wsdl:part name="EditAutoTransferSettingsResponse" element="chs:EditAutoTransferSettingsResponse" />
+    </wsdl:message>
+
+    <!-- Get Auto Transfer Settings -->
+    <wsdl:message name="GetAutoTransferSettingsRequest">
+        <wsdl:part name="GetAutoTransferSettingsRequest" element="chs:GetAutoTransferSettingsRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="GetAutoTransferSettingsResponse">
+        <wsdl:part name="GetAutoTransferSettingsResponse" element="chs:GetAutoTransferSettingsResponse" />
+    </wsdl:message>
+
+    <!-- Transfer -->
+    <wsdl:message name="SpendingSavingTransferRequest">
+        <wsdl:part name="SpendingSavingTransferRequest" element="chs:SpendingSavingTransferRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="SpendingSavingTransferResponse">
+        <wsdl:part name="SpendingSavingTransferResponse" element="chs:SpendingSavingTransferResponse" />
+    </wsdl:message>
+
+    <!-- Savings Account Balance Enquiry -->
+    <wsdl:message name="SavingAccountBalanceRequest">
+        <wsdl:part name="SavingAccountBalanceRequest" element="chs:SavingAccountBalanceRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="SavingAccountBalanceResponse">
+        <wsdl:part name="SavingAccountBalanceResponse" element="chs:SavingAccountBalanceResponse" />
+    </wsdl:message>
+
+    <!-- Message Center Question -->
+    <wsdl:message name="MessageCenterQuestionRequest">
+        <wsdl:part name="MessageCenterQuestionRequest" element="chs:MessageCenterQuestionRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="MessageCenterQuestionResponse">
+        <wsdl:part name="MessageCenterQuestionResponse" element="chs:MessageCenterQuestionResponse" />
+    </wsdl:message>
+
+    <!-- Card to Card transfer fee -->
+    <wsdl:message name="CardToCardTransferFeeRequest">
+        <wsdl:part name="CardToCardTransferFeeRequest" element="chs:CardToCardTransferFeeRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CardToCardTransferFeeResponse">
+        <wsdl:part name="CardToCardTransferFeeResponse" element="chs:CardToCardTransferFeeResponse" />
+    </wsdl:message>
+
+    <!-- Opt In and Opt Out -->
+    <wsdl:message name="OptInAndOutRequest">
+        <wsdl:part name="OptInAndOutRequest" element="chs:OptInAndOutRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="OptInAndOutResponse">
+        <wsdl:part name="OptInAndOutResponse" element="chs:OptInAndOutResponse" />
+    </wsdl:message>
+
+    <!-- CVVplus Registration -->
+    <wsdl:message name="CvvPlusRegistrationRequest">
+        <wsdl:part name="CvvPlusRegistrationRequest" element="chs:CvvPlusRegistrationRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CvvPlusRegistrationResponse">
+        <wsdl:part name="CvvPlusRegistrationResponse" element="chs:CvvPlusRegistrationResponse" />
+    </wsdl:message>
+
+    <!-- CVVplus Optout -->
+    <wsdl:message name="CvvPlusOptoutRequest">
+        <wsdl:part name="CvvPlusOptoutRequest" element="chs:CvvPlusOptoutRequest" />
+    </wsdl:message>
+
+    <wsdl:message name="CvvPlusOptoutResponse">
+        <wsdl:part name="CvvPlusOptoutResponse" element="chs:CvvPlusOptoutResponse" />
+    </wsdl:message>
+
+    <!-- GPR Card for Registered Starter Card
+   <wsdl:message name="GprCardforRegisteredStarterCardRequest">
+       <wsdl:part name="GprCardforRegisteredStarterCardRequest" element="chs:GprCardforRegisteredStarterCardRequest" />
+   </wsdl:message>
+
+   <wsdl:message name="GprCardforRegisteredStarterCardResponse">
+       <wsdl:part name="GprCardforRegisteredStarterCardResponse" element="chs:GprCardforRegisteredStarterCardResponse" />
+   </wsdl:message>-->
+
+    <!--  CHS PORT  -->
+    <wsdl:portType name="CHSPortType">
+        <!--  Get rid of this -->
+        <wsdl:operation name="validateAndAuthenticate">
+            <wsdl:input message="ValidateAndAuthenticateRequest" />
+            <wsdl:output message="ValidateAndAuthenticateResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="validateAndAuthenticateRevised">
+            <wsdl:input message="ValidateAndAuthenticateRevisedRequest" />
+            <wsdl:output message="ValidateAndAuthenticateRevisedResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="validateCardUsingCardPinAndCVV">
+            <wsdl:input message="ValidateCardUsingCardPinAndCVVRequest" />
+            <wsdl:output message="ValidateCardUsingCardPinAndCVVResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getCurrentMonthTransactions">
+            <wsdl:input message="GetCurrentMonthTransactionRequest" />
+            <wsdl:output message="GetCurrentMonthTransactionResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getMonthlyStatement">
+            <wsdl:input message="GetMonthlyStatementRequest" />
+            <wsdl:output message="GetMonthlyStatementResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="updatePin">
+            <wsdl:input message="UpdatePinRequest" />
+            <wsdl:output message="UpdatePinResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="directDepositForm">
+            <wsdl:input message="DirectDepositFormRequest" />
+            <wsdl:output message="DirectDepositFormResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="personalInfoInquiry">
+            <wsdl:input message="PersonalInfoInquiryRequest" />
+            <wsdl:output message="PersonalInfoInquiryResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="updatePersonalInfo">
+            <wsdl:input message="UpdatedPersonalInfoRequest" />
+            <wsdl:output message="UpdatedPersonalInfoResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="createSavingsAccount">
+            <wsdl:input message="CreateSavingsAccountRequest" />
+            <wsdl:output message="CreateSavingsAccountResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="closeSavingsAccount">
+            <wsdl:input message="CloseSavingsAccountRequest" />
+            <wsdl:output message="CloseSavingsAccountResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="closeSavingsAccountWithBalanceTransfer">
+            <wsdl:input message="CloseSavingsAccountWithBalanceTransferRequest" />
+            <wsdl:output message="CloseSavingsAccountWithBalanceTransferResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="reOpenSavingsAccount">
+            <wsdl:input message="ReOpenSavingsAccountRequest" />
+            <wsdl:output message="ReOpenSavingsAccountResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="editAutoTransferSettings">
+            <wsdl:input message="EditAutoTransferSettingsRequest" />
+            <wsdl:output message="EditAutoTransferSettingsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getAutoTransferSettings">
+            <wsdl:input message="GetAutoTransferSettingsRequest" />
+            <wsdl:output message="GetAutoTransferSettingsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="spendingSavingTransfer">
+            <wsdl:input message="SpendingSavingTransferRequest" />
+            <wsdl:output message="SpendingSavingTransferResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="cardToCardTransfer">
+            <wsdl:input message="CardToCardTransferRequest" />
+            <wsdl:output message="CardToCardTransferResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="transferLimits">
+            <wsdl:input message="TransferLimitsRequest" />
+            <wsdl:output message="TransferLimitsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getSavingsAccountActivity">
+            <wsdl:input message="SavingsAccountActivityRequest" />
+            <wsdl:output message="SavingsAccountActivityResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getSavingsAccountBalanceDetails">
+            <wsdl:input message="SavingAccountBalanceRequest" />
+            <wsdl:output message="SavingAccountBalanceResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="retrieveAlerts">
+            <wsdl:input message="RetrieveAlertsRequest" />
+            <wsdl:output message="RetrieveAlertsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="setAlerts">
+            <wsdl:input message="SetAlertsRequest" />
+            <wsdl:output message="SetAlertsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getCardToCardTransferFee">
+            <wsdl:input message="CardToCardTransferFeeRequest" />
+            <wsdl:output message="CardToCardTransferFeeResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getOptInAndOut">
+            <wsdl:input message="OptInAndOutRequest" />
+            <wsdl:output message="OptInAndOutResponse" />
+        </wsdl:operation>
+        <!-- <wsdl:operation name="getGprCardforRegisteredStarterCard">
+            <wsdl:input message="GprCardforRegisteredStarterCardRequest" />
+            <wsdl:output message="GprCardforRegisteredStarterCardResponse" />
+        </wsdl:operation> -->
+    </wsdl:portType>
+
+    <!--  Card Issuance Port  -->
+    <wsdl:portType name="CardIssuancePortType">
+        <wsdl:operation name="cardIssuance">
+            <wsdl:input message="CardIssuanceRequest" />
+            <wsdl:output message="CardIssuanceResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="cardActivation">
+            <wsdl:input message="CardActivationRequest" />
+            <wsdl:output message="CardActivationResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="cardLost">
+            <wsdl:input message="CardLostRequest" />
+            <wsdl:output message="CardLostResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="cardFound">
+            <wsdl:input message="CardFoundRequest" />
+            <wsdl:output message="CardFoundResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="cvvPlusRegistration">
+            <wsdl:input message="CvvPlusRegistrationRequest" />
+            <wsdl:output message="CvvPlusRegistrationResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="cvvPlusOptout">
+            <wsdl:input message="CvvPlusOptoutRequest" />
+            <wsdl:output message="CvvPlusOptoutResponse" />
+        </wsdl:operation>
+
+    </wsdl:portType>
+
+    <!-- User Management Port -->
+    <wsdl:portType name="CHSUserManagementPortType">
+        <wsdl:operation name="saveUserCredentials">
+            <wsdl:input message="SaveUserCredentialsRequest" />
+            <wsdl:output message="SaveUserCredentialsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="getRegistartionStatus">
+            <wsdl:input message="GetRegistartionStatusRequest" />
+            <wsdl:output message="GetRegistartionStatusResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="recoverPasswordSecurityQuestions">
+            <wsdl:input message="RecoverPasswordSecurityQuestionsRequest" />
+            <wsdl:output message="RecoverPasswordSecurityQuestionsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="recoverPasswordValidateSecurityQuestions">
+            <wsdl:input message="RecoverPasswordValidateSecurityQuestionsRequest" />
+            <wsdl:output message="RecoverPasswordValidateSecurityQuestionsResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="setNewpassword">
+            <wsdl:input message="SetNewPasswordRequest" />
+            <wsdl:output message="SetNewPasswordResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="updatePassword">
+            <wsdl:input message="UpdatePasswordRequest" />
+            <wsdl:output message="UpdatePasswordResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="messageCenterQuestion">
+            <wsdl:input message="MessageCenterQuestionRequest" />
+            <wsdl:output message="MessageCenterQuestionResponse" />
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <!-- CHS Binding -->
+    <wsdl:binding name="CHSServiceHTTPBinding" type="CHSPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <!-- Get rid of this -->
+        <wsdl:operation name="validateAndAuthenticate">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validateAndAuthenticateRevised">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validateCardUsingCardPinAndCVV">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCurrentMonthTransactions">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMonthlyStatement">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updatePin">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="directDepositForm">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="personalInfoInquiry">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updatePersonalInfo">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createSavingsAccount">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="closeSavingsAccount">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="closeSavingsAccountWithBalanceTransfer">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="reOpenSavingsAccount">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSavingsAccountActivity">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="editAutoTransferSettings">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAutoTransferSettings">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="spendingSavingTransfer">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cardToCardTransfer">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="transferLimits">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSavingsAccountBalanceDetails">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveAlerts">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setAlerts">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCardToCardTransferFee">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getOptInAndOut">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <!-- <wsdl:operation name="getGprCardforRegisteredStarterCard">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation> -->
+    </wsdl:binding>
+
+    <!--  Card Issuance Binding -->
+    <wsdl:binding name="CardIssuanceServiceHTTPBinding" type="CardIssuancePortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="cardIssuance">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cardActivation">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cardLost">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cardFound">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cvvPlusRegistration">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cvvPlusOptout">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <!--  User Management Binding -->
+    <wsdl:binding name="CHSUserManagementServiceHTTPBinding" type="CHSUserManagementPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="saveUserCredentials">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getRegistartionStatus">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="recoverPasswordSecurityQuestions">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="recoverPasswordValidateSecurityQuestions">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setNewpassword">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updatePassword">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="messageCenterQuestion">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <!--  Services -->
+    <wsdl:service name="CHSService">
+        <wsdl:port name="CHSPort" binding="CHSServiceHTTPBinding">
+            <soap:address location="http://10.4.133.32:8880/chs-ws/CHS" />
+        </wsdl:port>
+    </wsdl:service>
+
+    <wsdl:service name="CardIssuanceService">
+        <wsdl:port name="CardIssuancePort" binding="CardIssuanceServiceHTTPBinding">
+            <soap:address location="http://10.4.133.32:8880/chs-ws/CardIssuance" />
+        </wsdl:port>
+    </wsdl:service>
+
+    <wsdl:service name="CHSUserManagementService">
+        <wsdl:port name="CHSUserManagementPort" binding="CHSUserManagementServiceHTTPBinding">
+            <soap:address location="http://10.4.133.32:8880/chs-ws/CHSUserManagement" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
