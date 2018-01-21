@@ -1,11 +1,11 @@
 package com.incomm.vms.controller;
 
-import com.incomm.vms.request.Address;
-import com.incomm.vms.request.UpdatePasswordReq;
-import com.incomm.vms.request.UpdateProfileRequest;
-import org.auth.cardmanagement.PersonalInfoInquiryResponse;
-import org.auth.cardmanagement.UpdatePasswordResponse;
-import org.auth.cardmanagement.UpdatedPersonalInfoResponse;
+import com.incomm.wmp.gprServices.request.Address;
+import com.incomm.wmp.gprServices.request.UpdatePasswordReq;
+import com.incomm.wmp.gprServices.request.UpdateProfileRequest;
+import com.incomm.chstypes.PersonalInfoInquiryResponse;
+import com.incomm.chstypes.UpdatePasswordResponse;
+import com.incomm.chstypes.UpdatedPersonalInfoResponse;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,7 +43,7 @@ public class UserProfileControllerTest extends BaseRunner{
     public void retrieveUserProfile() throws Exception {
         PersonalInfoInquiryResponse personalInfoResponse = new PersonalInfoInquiryResponse();
         personalInfoResponse.setResponse(getResponse());
-        org.auth.cardmanagement.Address address = new org.auth.cardmanagement.Address();
+        com.incomm.chstypes.Address address = new com.incomm.chstypes.Address();
         address.setZip("758");
         address.setState("968");
         address.setCountry("754");

@@ -29,7 +29,7 @@
 
 
 
-    <logger name="com.incomm.vms" level="info"
+    <logger name="com.incomm.wmp.gprServices" level="info"
             additivity="false">
         <appender-ref ref="FILE-APPENDER" />
         <appender-ref ref="CONSOLE" />

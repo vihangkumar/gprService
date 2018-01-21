@@ -4,6 +4,7 @@ import com.incomm.wmp.gprServices.logging.LoggingInterceptor;
 import com.incomm.wmp.gprServices.outbound.ingo.transport.http.IngoHttpsUrlConnectionMessageSender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -43,26 +44,13 @@ public class AppConfig {
         return marshaller;
     }
 
-  /*  *//**
-     * Creates bean for LoggingInterceptor
-     * @return LoggingInterceptor
-     *//*
-    @Bean
-    public LoggingInterceptor getLoggingInterceptor() {
-        LoggingInterceptor loggingInterceptor = new LoggingInterceptor();
-        return loggingInterceptor;
-    }*/
-
-    /**
-     *
-     * @param connectTimeout
-     * @param readTimeout
-     * @param shouldVerifyHost
-     * @return
-     */
 
     //@Value("${ingo_ws_connection_timeout}") int connectTimeout, @Value("${ingo_ws_read_timeout}") int readTimeout, @Value("${ingo_ws_verify_hostname}") Boolean shouldVerifyHost)
 
+    /**
+     *
+     * @return
+     */
     @Bean
     public IngoHttpsUrlConnectionMessageSender getIngoMessageSender() {
         IngoHttpsUrlConnectionMessageSender sender = new IngoHttpsUrlConnectionMessageSender();
@@ -74,12 +62,12 @@ public class AppConfig {
     }
 
     @Bean  (name = "IngoWebServiceTemplate")
-    public WebServiceTemplate getWebServiceTemplate(LoggingInterceptor loggingInterceptor, IngoHttpsUrlConnectionMessageSender ingoHttpUrlConnectionMessageSender) {
+    public WebServiceTemplate getWebServiceTemplate(LoggingInterceptor loggingInterceptor, @Qualifier("ingoMarshaller")Jaxb2Marshaller ingoMarshaller, IngoHttpsUrlConnectionMessageSender ingoHttpUrlConnectionMessageSender) {
 
         WebServiceTemplate template = new WebServiceTemplate();
         template.setDefaultUri(ingoUrl);
-        template.setMarshaller(getIngomarshaller());
-        template.setUnmarshaller(getIngomarshaller());
+        template.setMarshaller(ingoMarshaller);
+        template.setUnmarshaller(ingoMarshaller);
         template.setInterceptors(new ClientInterceptor[]{loggingInterceptor});
         template.setMessageSender(ingoHttpUrlConnectionMessageSender);
         return template;
@@ -89,7 +77,7 @@ public class AppConfig {
 
     //VMS beans
 
-    @Bean
+    @Bean(name = "vmsMarshaller")
     public Jaxb2Marshaller getMarshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setContextPath(ctxPath);
@@ -113,7 +101,7 @@ public class AppConfig {
 
 
     @Bean(name = "usermanagementPort")
-    public WebServiceTemplate getWebServiceTemplate2(Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
+    public WebServiceTemplate getWebServiceTemplate2( @Qualifier("vmsMarshaller") Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
                                                      HttpComponentsMessageSender httpComponentsMessageSender) {
         WebServiceTemplate template = new WebServiceTemplate();
         template.setDefaultUri(userManagementEndpointUrl);
@@ -126,7 +114,7 @@ public class AppConfig {
 
 
     @Bean(name = "cardIssuerPort")
-    public WebServiceTemplate getWebServiceTemplate1(Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
+    public WebServiceTemplate getWebServiceTemplate1(@Qualifier("vmsMarshaller") Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
                                                      HttpComponentsMessageSender httpComponentsMessageSender) {
 
         WebServiceTemplate template = new WebServiceTemplate();
@@ -140,7 +128,7 @@ public class AppConfig {
 
 
     @Bean(name = "chsPort")
-    public WebServiceTemplate getWebServiceTemplate(Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
+    public WebServiceTemplate getWebServiceTemplate(@Qualifier("vmsMarshaller") Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
                                                     HttpComponentsMessageSender httpComponentsMessageSender) {
 
         WebServiceTemplate template = new WebServiceTemplate();

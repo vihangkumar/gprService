@@ -1,4 +1,4 @@
-package com.incomm.vms.config;
+package com.incomm.wmp.gprServices.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

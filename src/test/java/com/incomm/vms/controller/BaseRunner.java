@@ -1,9 +1,13 @@
 package com.incomm.vms.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.incomm.vms.util.VmsServiceUtil;
-import org.auth.cardmanagement.Header;
-import org.auth.cardmanagement.Response;
+import com.incomm.wmp.gprServices.controller.CardController;
+import com.incomm.wmp.gprServices.controller.CardIssuanceController;
+import com.incomm.wmp.gprServices.controller.UserAccountCreationController;
+import com.incomm.wmp.gprServices.controller.UserProfileController;
+import com.incomm.wmp.gprServices.util.VmsServiceUtil;
+import com.incomm.chstypes.Header;
+import com.incomm.chstypes.Response;
 import org.jasypt.encryption.StringEncryptor;
 import org.junit.Before;
 import org.mockito.InjectMocks;
@@ -41,13 +45,13 @@ public class BaseRunner {
     VmsServiceUtil vmsServiceUtil;
 
     @InjectMocks
-    public UserController userController;
+    public UserControllerTest userController;
 
     @InjectMocks
     public CardController cardController;
 
     @InjectMocks
-    public  UserAccountCreationController userAccountCreationController;
+    public UserAccountCreationController userAccountCreationController;
 
     @InjectMocks
     public CardIssuanceController cardIssuanceController;

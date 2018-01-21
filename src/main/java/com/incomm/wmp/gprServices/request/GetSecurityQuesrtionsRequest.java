@@ -1,4 +1,4 @@
-package com.incomm.vms.request;
+package com.incomm.wmp.gprServices.request;
 
 public class GetSecurityQuesrtionsRequest
 {

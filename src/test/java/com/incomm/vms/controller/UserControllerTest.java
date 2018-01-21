@@ -1,7 +1,7 @@
 package com.incomm.vms.controller;
 
-import com.incomm.vms.request.LoginRequest;
-import com.incomm.vms.response.BaseResponse;
+import com.incomm.wmp.gprServices.request.LoginRequest;
+import com.incomm.wmp.gprServices.response.BaseResponse;
 //import org.auth.cardmanagement.Header;
 //import org.auth.cardmanagement.Response;
 //import org.auth.cardmanagement.ValidateAndAuthenticateRevisedResponse;

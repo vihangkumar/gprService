@@ -1,4 +1,4 @@
-package com.incomm.vms.config;
+package com.incomm.wmp.gprServices.config;
 
 import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.client.config.ClientConfig;

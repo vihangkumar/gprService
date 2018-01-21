@@ -1,9 +1,9 @@
 package com.incomm.vms.controller;
 
-import com.incomm.vms.request.TransferFundsRequest;
-import com.incomm.vms.request.UpdatePinRequest;
-import com.incomm.vms.response.BaseResponse;
-import org.auth.cardmanagement.*;
+import com.incomm.wmp.gprServices.request.TransferFundsRequest;
+import com.incomm.wmp.gprServices.request.UpdatePinRequest;
+import com.incomm.wmp.gprServices.response.BaseResponse;
+import com.incomm.chstypes.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

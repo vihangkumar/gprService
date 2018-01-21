@@ -1,4 +1,4 @@
-package com.incomm.vms.config;
+package com.incomm.wmp.gprServices.config;
 
 import com.incomm.imp.neo.datamasking.config.MaskingConfiguration;
 import com.incomm.imp.neo.datamasking.json.JsonPayloadMasker;
