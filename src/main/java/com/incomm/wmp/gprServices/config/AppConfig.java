@@ -62,7 +62,7 @@ public class AppConfig {
     }
 
     @Bean  (name = "IngoWebServiceTemplate")
-    public WebServiceTemplate getWebServiceTemplate(LoggingInterceptor loggingInterceptor, @Qualifier("ingoMarshaller")Jaxb2Marshaller ingoMarshaller, IngoHttpsUrlConnectionMessageSender ingoHttpUrlConnectionMessageSender) {
+    public WebServiceTemplate getWebServiceTemplate(LoggingInterceptor loggingInterceptor, @Qualifier("ingoMarshaller") Jaxb2Marshaller ingoMarshaller, IngoHttpsUrlConnectionMessageSender ingoHttpUrlConnectionMessageSender) {
 
         WebServiceTemplate template = new WebServiceTemplate();
         template.setDefaultUri(ingoUrl);
@@ -128,7 +128,7 @@ public class AppConfig {
 
 
     @Bean(name = "chsPort")
-    public WebServiceTemplate getWebServiceTemplate(@Qualifier("vmsMarshaller") Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
+    public WebServiceTemplate getWebServiceTemplate3 (@Qualifier("vmsMarshaller") Jaxb2Marshaller marshaller, LoggingInterceptor loggingInterceptor,
                                                     HttpComponentsMessageSender httpComponentsMessageSender) {
 
         WebServiceTemplate template = new WebServiceTemplate();
@@ -186,5 +186,46 @@ public class AppConfig {
 
     public void setCtxPath(String ctxPath) {
         this.ctxPath = ctxPath;
+    }
+
+
+    public String getIngoCtxPath() {
+        return ingoCtxPath;
+    }
+
+    public void setIngoCtxPath(String ingoCtxPath) {
+        this.ingoCtxPath = ingoCtxPath;
+    }
+
+    public int getIngconnectTimeout() {
+        return ingconnectTimeout;
+    }
+
+    public void setIngconnectTimeout(int ingconnectTimeout) {
+        this.ingconnectTimeout = ingconnectTimeout;
+    }
+
+    public int getIngoreadTimeout() {
+        return ingoreadTimeout;
+    }
+
+    public void setIngoreadTimeout(int ingoreadTimeout) {
+        this.ingoreadTimeout = ingoreadTimeout;
+    }
+
+    public boolean isShouldVerifyHost() {
+        return shouldVerifyHost;
+    }
+
+    public void setShouldVerifyHost(boolean shouldVerifyHost) {
+        this.shouldVerifyHost = shouldVerifyHost;
+    }
+
+    public String getIngoUrl() {
+        return ingoUrl;
+    }
+
+    public void setIngoUrl(String ingoUrl) {
+        this.ingoUrl = ingoUrl;
     }
 }

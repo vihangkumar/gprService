@@ -6,6 +6,8 @@ import org.springframework.beans.BeanUtils;
 
 import com.incomm.wmp.gprServices.outbound.ingo.responses.*;
 import com.incomm.wmp.gprServices.outbound.ingo.requests.*;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.tempuri.*;
 import org.datacontract.schemas._2004._07.cpi_clearecd_entities.*;
 import org.slf4j.Logger;
@@ -37,6 +39,7 @@ import java.util.Map;
 
 @Validated
 @Service
+@ConfigurationProperties(prefix = "ingoOutbound")
 public class IngoServiceClient {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
@@ -44,21 +47,17 @@ public class IngoServiceClient {
     private static ApplicationContext appCtx;
 
     @Autowired
+    @Qualifier("IngoWebServiceTemplate")
     private WebServiceTemplate template;
 
-    private static IngoServiceClient ingoServiceClientInstance;
+    //private static IngoServiceClient ingoServiceClientInstance;
 
-    @Value("${ingo_ws_android_connectid}")
     private String androidConnectId;
-
-    @Value("${ingo_ws_android_token}")
     private String androidToken;
-
-    @Value("${ingo_ws_ios_connectid}")
     private String iosConnectId;
-
-    @Value("${ingo_ws_ios_token}")
     private String iosToken;
+
+
 
   /*  public static IngoServiceClient getInstance() {
         appCtx = AppCtxIngo.getInstance().getApplicationContext();
@@ -563,4 +562,38 @@ public class IngoServiceClient {
     }
 
 
+    //Getters and Setters
+
+
+    public String getAndroidConnectId() {
+        return androidConnectId;
+    }
+
+    public void setAndroidConnectId(String androidConnectId) {
+        this.androidConnectId = androidConnectId;
+    }
+
+    public String getAndroidToken() {
+        return androidToken;
+    }
+
+    public void setAndroidToken(String androidToken) {
+        this.androidToken = androidToken;
+    }
+
+    public String getIosConnectId() {
+        return iosConnectId;
+    }
+
+    public void setIosConnectId(String iosConnectId) {
+        this.iosConnectId = iosConnectId;
+    }
+
+    public String getIosToken() {
+        return iosToken;
+    }
+
+    public void setIosToken(String iosToken) {
+        this.iosToken = iosToken;
+    }
 }
